@@ -1,42 +1,20 @@
 <template>
-<div class="home-page">
-  <section class="intro">
-    <h1>Awesome title here</h1>
-  </section>
-  <section class="featured-posts">
-    
-    <PostPreview
-    id="1"
-    thumbnail="http://via.placeholder.com/350x150"
-    title="Hello there"
-    previewText="This is my first post" >
-    </PostPreview>
-    <PostPreview
-    id="2"
-    thumbnail="http://via.placeholder.com/350x150"
-    title="Another one?"
-    previewText="This is my second post" >
-    </PostPreview>
-    <PostPreview
-    id="3"
-    thumbnail="http://via.placeholder.com/350x150"
-    title="Yep another"
-    previewText="This is my thid post" >
-    </PostPreview>    
-  </section>
-</div>
+  <div class="home-page">
+    <section class="intro">
+      <h1>Awesome title here yeeeeah</h1>
+    </section>
+    <PostList />
+  </div>
 </template>
 
 <script>
-import PostPreview from '@/components/Posts/PostPreview';
-
+import PostList from '@/components/Posts/PostList';
 export default {
-  components: {
-    PostPreview
+      components: {
+    PostList
   }
 }
 </script>
-
 
 <style scoped>
 .intro {
@@ -58,10 +36,10 @@ export default {
   color: black;
   background-color: rgb(211, 211, 211);
   padding: 10px;
-  border-radius: 4px;
-  box-shadow: 3px 4px 2px black;
+  border-radius: 2px;
+  /* box-shadow: 3px 4px 2px black; */
   box-sizing: border-box;
-  border: 1px solid peru;
+  border: 1px solid #800;
   display: flex;
   justify-content: center;  
 }
@@ -72,13 +50,6 @@ export default {
   }
 }
 
-.featured-posts {
-  display: flex;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
+
 
 </style>
