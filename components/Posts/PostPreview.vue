@@ -67,11 +67,12 @@ a {
 .post-content {
   padding: 10px;
   text-align: center;
+  transition: .5s background-color ease-out;
 }
 
 a:hover .post-content,
 a:active .post-content {
-  background-color: #ccc;
+  background-color: peru;
 }
 
 </style>
