@@ -28,6 +28,7 @@ export default {
 <style>
 html {
   font-family: 'Open Sans', sans-serif;
+  background-color: whitesmoke;
 }
 
 body {

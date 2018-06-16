@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style scoped>
+
 .intro {
   height: 300px;
   position: relative;
