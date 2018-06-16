@@ -4,32 +4,43 @@
     <h1>Awesome title here</h1>
   </section>
   <section class="featured-posts">
-    <nuxt-link :to="'/posts/' + 1 "  class="post-preview">
-    <article>
-      <div class="post-thumbnail" style="background-image: url('http://via.placeholder.com/600x150')"></div>
-      <div class="post-content">
-        <h1>Post title</h1>
-        <p>Preview text snippet</p>
-      </div>
-      </article>
-      </nuxt-link>
-
-    <nuxt-link :to="'/posts/' + 2"  class="post-preview">
-    <article>
-      <div class="post-thumbnail" style="background-image: url('http://via.placeholder.com/600x150'"></div>
-      <div class="post-content">
-        <h1>Post title 2</h1>
-        <p>Preview text snippet 2</p>
-      </div>
-      </article>
-      </nuxt-link>      
+    
+    <PostPreview
+    id="1"
+    thumbnail="http://via.placeholder.com/350x150"
+    title="Hello there"
+    previewText="This is my first post" >
+    </PostPreview>
+    <PostPreview
+    id="2"
+    thumbnail="http://via.placeholder.com/350x150"
+    title="Another one?"
+    previewText="This is my second post" >
+    </PostPreview>
+    <PostPreview
+    id="3"
+    thumbnail="http://via.placeholder.com/350x150"
+    title="Yep another"
+    previewText="This is my thid post" >
+    </PostPreview>    
   </section>
 </div>
 </template>
 
+<script>
+import PostPreview from '@/components/Posts/PostPreview';
+
+export default {
+  components: {
+    PostPreview
+  }
+}
+</script>
+
+
 <style scoped>
 .intro {
-  height: 300px;
+  height: 120px;
   position: relative;
   padding: 30px;
   box-sizing: border-box;
@@ -46,10 +57,12 @@
   color: black;
   background-color: rgb(211, 211, 211);
   padding: 10px;
-  border-radius: 10px;
-  box-shadow: 3px 3px 3px black;
+  border-radius: 4px;
+  box-shadow: 3px 4px 2px black;
   box-sizing: border-box;
-  border: 1px solid black;
+  border: 1px solid peru;
+  display: flex;
+  justify-content: center;  
 }
 
 @media (min-width: 768px) {
@@ -65,42 +78,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
-.post-thumbnail {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
 }
 
 </style>
